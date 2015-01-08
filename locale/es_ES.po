@@ -1,0 +1,147 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:stock.shipment.out.tool,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:stock.shipment.out.tool,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:stock.shipment.out.tool,customer:"
+msgid "Customer"
+msgstr "Cliente"
+
+msgctxt "field:stock.shipment.out.tool,delivery_address:"
+msgid "Delivery Address"
+msgstr "Dirección envío"
+
+msgctxt "field:stock.shipment.out.tool,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "field:stock.shipment.out.tool,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:stock.shipment.out.tool,inventory_moves:"
+msgid "Inventory Moves"
+msgstr "Movimientos internos"
+
+msgctxt "field:stock.shipment.out.tool,moves:"
+msgid "Moves"
+msgstr "Movimientos"
+
+msgctxt "field:stock.shipment.out.tool,outgoing_moves:"
+msgid "Incoming Moves"
+msgstr "Movimientos de entrada"
+
+msgctxt "field:stock.shipment.out.tool,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:stock.shipment.out.tool,shipment:"
+msgid "Shipment"
+msgstr "Albarán"
+
+msgctxt "field:stock.shipment.out.tool,shipment_date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:stock.shipment.out.tool,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:stock.shipment.out.tool,warehouse:"
+msgid "Warehouse"
+msgstr "Almacén"
+
+msgctxt "field:stock.shipment.out.tool,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:stock.shipment.out.tool,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:ir.action,name:act_shipment_out_tool_employee_form"
+msgid "Shipment Out Tool by Employee"
+msgstr "Herramienta albarán cliente por empleado"
+
+msgctxt "model:ir.action,name:act_shipment_out_tool_form"
+msgid "Shipment Out Tool"
+msgstr "Herramienta albarán cliente"
+
+msgctxt "model:ir.ui.menu,name:menu_shipment_out_tool"
+msgid "Shipment Out"
+msgstr "Albaranes cliente"
+
+msgctxt "model:ir.ui.menu,name:menu_shipment_out_tool_employee"
+msgid "Shipment Out"
+msgstr "Albaranes cliente"
+
+msgctxt "model:ir.ui.menu,name:menu_stock_tools"
+msgid "Tools"
+msgstr "Herramientas"
+
+msgctxt "model:ir.ui.menu,name:menu_stock_tools_all"
+msgid "All"
+msgstr "Todos"
+
+msgctxt "model:res.group,name:group_stock_tools"
+msgid "Stock Tools"
+msgstr "Herramienta stock"
+
+msgctxt "model:res.group,name:group_stock_tools_admin"
+msgid "Stock Tools Administrator"
+msgstr "Administrador herramienta stock"
+
+msgctxt "model:stock.shipment.out.tool,name:"
+msgid "Shipment Out Tool"
+msgstr "Herramienta albarán cliente"
+
+msgctxt "selection:stock.shipment.out.tool,state:"
+msgid "Assigned"
+msgstr "Reservado"
+
+msgctxt "selection:stock.shipment.out.tool,state:"
+msgid "Canceled"
+msgstr "Cancelado"
+
+msgctxt "selection:stock.shipment.out.tool,state:"
+msgid "Done"
+msgstr "Realizado"
+
+msgctxt "selection:stock.shipment.out.tool,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:stock.shipment.out.tool,state:"
+msgid "Packed"
+msgstr "Empaquetado"
+
+msgctxt "selection:stock.shipment.out.tool,state:"
+msgid "Waiting"
+msgstr "En espera"
+
+msgctxt "view:stock.shipment.out.tool:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:stock.shipment.out.tool:"
+msgid "Inventory Moves"
+msgstr "Movimientos internos"
+
+msgctxt "view:stock.shipment.out.tool:"
+msgid "Next"
+msgstr "Siguiente"
+
+msgctxt "view:stock.shipment.out.tool:"
+msgid "Outgoing Moves"
+msgstr "Movimientos de salida"
+
+msgctxt "view:stock.shipment.out.tool:"
+msgid "Shipment Out Tool"
+msgstr "Herramienta albarán cliente"

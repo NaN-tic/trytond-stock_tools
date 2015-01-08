@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!-- This file is part stock_tools module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Groups -->
+        <record model="res.group" id="group_stock_tools">
+            <field name="name">Stock Tools</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_stock_tools">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_stock_tools"/>
+        </record>
+
+        <record model="res.group" id="group_stock_tools_admin">
+            <field name="name">Stock Tools Administrator</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_stock_tools_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_stock_tools_admin"/>
+        </record>
+
+        <!-- Main Menu -->
+        <menuitem parent="stock.menu_stock" name="Tools" id="menu_stock_tools"/>
+        <record model="ir.ui.menu-res.group" id="menu_stock_tools_group_stock_tools">
+            <field name="menu" ref="menu_stock_tools"/>
+            <field name="group" ref="group_stock_tools"/>
+        </record>
+
+        <menuitem parent="menu_stock_tools" name="All" id="menu_stock_tools_all"/>
+        <record model="ir.ui.menu-res.group" id="menu_stock_tools_all_group_stock_tools_admin">
+            <field name="menu" ref="menu_stock_tools_all"/>
+            <field name="group" ref="group_stock_tools_admin"/>
+        </record>
+
+        <!-- Shipment Out Tool -->
+        <record model="ir.ui.view" id="shipment_out_tool_view_form">
+            <field name="model">stock.shipment.out.tool</field>
+            <field name="type">form</field>
+            <field name="name">shipment_out_tool_form</field>
+        </record>
+        <record model="ir.ui.view" id="shipment_out_tool_view_tree">
+            <field name="model">stock.shipment.out.tool</field>
+            <field name="type">tree</field>
+            <field name="name">shipment_out_tool_tree</field>
+        </record>
+
+        <!-- Shipment Out Tool by Employee -->
+        <record model="ir.action.act_window" id="act_shipment_out_tool_employee_form">
+            <field name="name">Shipment Out Tool by Employee</field>
+            <field name="res_model">stock.shipment.out.tool</field>
+            <field name="domain">[('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="search_value">[('shipment_date', '>=', Date())]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shipment_out_tool_employee_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="shipment_out_tool_view_tree"/>
+            <field name="act_window" ref="act_shipment_out_tool_employee_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shipment_out_tool_employee_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="shipment_out_tool_view_form"/>
+            <field name="act_window" ref="act_shipment_out_tool_employee_form"/>
+        </record>
+
+        <menuitem
+            name="Shipment Out"
+            parent="menu_stock_tools"
+            action="act_shipment_out_tool_employee_form"
+            id="menu_shipment_out_tool_employee" icon="tryton-list"/>
+
+        <!-- Shipment Out Tool (without employee) -->
+        <record model="ir.action.act_window" id="act_shipment_out_tool_form">
+            <field name="name">Shipment Out Tool</field>
+            <field name="res_model">stock.shipment.out.tool</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shipment_out_tool_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="shipment_out_tool_view_tree"/>
+            <field name="act_window" ref="act_shipment_out_tool_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shipment_out_tool_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="shipment_out_tool_view_form"/>
+            <field name="act_window" ref="act_shipment_out_tool_form"/>
+        </record>
+
+        <menuitem
+            name="Shipment Out"
+            parent="menu_stock_tools_all"
+            action="act_shipment_out_tool_form"
+            id="menu_shipment_out_tool" icon="tryton-list"/>
+
+        <!-- Access -->
+        <record model="ir.model.access" id="access_shipment_out_tool">
+            <field name="model" search="[('model', '=', 'stock.shipment.out.tool')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_shipment_out_tool_manager">
+            <field name="model" search="[('model', '=', 'stock.shipment.out.tool')]"/>
+            <field name="group" ref="group_stock_tools"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

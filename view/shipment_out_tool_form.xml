@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- This file is part stock_tools module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Shipment Out Tool">
+    <label name="shipment"/>
+    <field name="shipment"/>
+    <label name="warehouse"/>
+    <field name="warehouse" readonly="1"/>
+    <label name="customer"/>
+    <field name="customer" readonly="1"/>
+    <label name="delivery_address"/>
+    <field name="delivery_address" readonly="1"/>
+    <notebook colspan="4">
+        <page string="Inventory Moves" id="inventory_moves">
+            <field name="inventory_moves" colspan="4"/>
+        </page>
+        <page string="Outgoing Moves" id="outgoing_moves">
+            <field name="outgoing_moves" colspan="4"/>
+        </page>
+        <page string="General" id="general">
+            <label name="employee"/>
+            <field name="employee" readonly="1"/>
+            <label name="shipment_date"/>
+            <field name="shipment_date"/>
+        </page>
+    </notebook>
+    <group col="4" colspan="4" id="state_buttons">
+        <label name="state"/>
+        <field name="state" readonly="1"/>
+        <group col="6" colspan="2" id="buttons">
+            <button string="Next" name="next" icon="tryton-ok"/>
+        </group>
+    </group>
+</form>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part stock_tools module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tree string="Shipment Out Tool" editable="bottom">
+    <field name="shipment"/>
+    <field name="customer"/>
+    <field name="delivery_address"/>
+    <field name="warehouse"/>
+    <field name="shipment_date" tree_invisible="1"/>
+    <field name="employee" tree_invisible="1"/>
+    <button name="next" string="Next"/>
+</tree>
