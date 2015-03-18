@@ -111,3 +111,31 @@ class ShipmentOutTool(ModelSQL, ModelView):
             if hasattr(cls, method_name):
                 getattr(cls, method_name)(tool)
         return 'new'
+
+    def next_draft(self):
+        pool = Pool()
+        Shipment = Pool().get('stock.shipment.out')
+
+        # Change new state: waiting
+        Shipment.wait([self.shipment])
+
+    def next_waiting(self):
+        pool = Pool()
+        Shipment = Pool().get('stock.shipment.out')
+
+        # Change new state: assigned
+        Shipment.assign_try([self.shipment])
+
+    def next_assigned(self):
+        pool = Pool()
+        Shipment = Pool().get('stock.shipment.out')
+
+        # Change new state: assigned
+        Shipment.pack([self.shipment])
+
+    def next_packed(self):
+        pool = Pool()
+        Shipment = Pool().get('stock.shipment.out')
+
+        # Change new state: done
+        Shipment.done([self.shipment])

@@ -21,3 +21,13 @@ Dispone de dos nuevos menús para las herramientas:
   Acceso mediante grupo "Administrador herramienta stock".
 - Defecto. Muestro todos los albaranes que se han gestionado según empleado actual (preferencias usuario).
   Acceso mediante grupo "Herramienta stock".
+
+Acciones por defecto (Nexts)
+----------------------------
+
+Se dispone de métodos "next" para proceder/continuar con el abarán para el siguiente estado:
+
+- Borrador -> En espera
+- En espera -> Asignado (assign_try)
+- Asignado -> Empaquetado
+- Empaquetado -> Realizado

@@ -18,3 +18,13 @@ There are two menus to manage Stock Tools:
 
 - All. Show all shipments managed without employee. Access "Stock Tools Administrator" group.
 - Default. Show all shipments managed with current employee (user preferences). Access "Stock Tools" group.
+
+Default Nexts
+-------------
+
+There are default nexts methods to process/continue shipment to next state:
+
+- Draft -> Waitint
+- Waiting -> Assigned (assign_try)
+- Assigned -> Packed
+- Packed -> Done
