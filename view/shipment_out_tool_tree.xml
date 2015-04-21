@@ -2,7 +2,7 @@
 <!-- This file is part stock_tools module for Tryton.
 The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
 <tree string="Shipment Out Tool" editable="bottom">
-    <field name="shipment"/>
+    <field name="shipment" completion="0"/>
     <field name="customer"/>
     <field name="delivery_address"/>
     <field name="warehouse"/>
