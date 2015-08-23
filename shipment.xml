@@ -49,8 +49,12 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action.act_window" id="act_shipment_out_tool_employee_form">
             <field name="name">Shipment Out Tool by Employee</field>
             <field name="res_model">stock.shipment.out.tool</field>
-            <field name="domain">[('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
-            <field name="search_value">[('shipment_date', '>=', Date())]</field>
+            <field name="domain"
+                eval="[('employee.id', '=', Eval('context', {}).get('employee', -1))]"
+                pyson="1"/>
+            <field name="search_value"
+                eval="[('shipment_date', '>=', Date())]"
+                pyson="1"/>
         </record>
         <record model="ir.action.act_window.view" id="act_shipment_out_tool_employee_view1">
             <field name="sequence" eval="1"/>
