@@ -64,13 +64,11 @@ class ShipmentOutTool(ModelSQL, ModelView):
 
     @fields.depends('shipment')
     def on_change_shipment(self):
-        changes = {}
         if self.shipment:
-            changes['customer'] = self.shipment.customer.id
-            changes['delivery_address'] = self.shipment.delivery_address.id
-            changes['warehouse'] = self.shipment.warehouse.id
-            changes['state'] = self.shipment.state
-        return changes
+            self.customer = self.shipment.customer
+            self.delivery_address = self.shipment.delivery_address
+            self.warehouse = self.shipment.warehouse
+            self.state = self.shipment.state
 
     @fields.depends('shipment')
     def on_change_with_moves(self, name=None):
