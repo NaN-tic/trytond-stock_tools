@@ -111,28 +111,24 @@ class ShipmentOutTool(ModelSQL, ModelView):
         return 'new'
 
     def next_draft(self):
-        pool = Pool()
         Shipment = Pool().get('stock.shipment.out')
 
         # Change new state: waiting
         Shipment.wait([self.shipment])
 
     def next_waiting(self):
-        pool = Pool()
         Shipment = Pool().get('stock.shipment.out')
 
         # Change new state: assigned
         Shipment.assign_try([self.shipment])
 
     def next_assigned(self):
-        pool = Pool()
         Shipment = Pool().get('stock.shipment.out')
 
         # Change new state: assigned
         Shipment.pack([self.shipment])
 
     def next_packed(self):
-        pool = Pool()
         Shipment = Pool().get('stock.shipment.out')
 
         # Change new state: done
